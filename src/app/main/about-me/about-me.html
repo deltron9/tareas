@@ -1,1 +1,53 @@
-<p>about-me works!</p>
+<section class="about-section">
+  <div class="section-header">
+    <h2 class="glitch-title" data-text="SOBRE_MI">SOBRE_MI</h2>
+    <div class="system-status">
+      <span class="pulse-icon"></span>
+      <span class="status-text">SYSTEM_ACTIVE</span>
+    </div>
+  </div>
+
+  <div class="profile-layout">
+    <div class="info-card identity">
+      <div class="card-tag">ID_SCAN</div>
+      <div class="photo-container">
+        <div class="scan-bar"></div>
+        <div class="placeholder-icon">USER_01</div>
+      </div>
+      <div class="identity-data">
+        <p><span>NAME:</span> CRISTIAN</p>
+        <p><span>ROLE:</span> FULLSTACK_DEV</p>
+        <p><span>LOC:</span> BUE_ARG_ZONA_SUR</p>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="info-card bio">
+        <div class="card-tag">CORE_LOGS</div>
+        <p class="terminal-text">
+          > Estudiante de 2do año - Tecnicatura en Programación (UTN).<br>
+          > Especializado en Desarrollo Web y Sexo.<br>
+          > Enfoque en Guiso de AArroz Con Pollo.<br>
+          > Powerlifter: Deadlift PR 205kg sin equipamiento.
+        </p>
+      </div>
+      <div class="skills-container">
+        @for (skill of [
+          {n: 'BACKEND', l: '85%'},
+          {n: 'NETWORKING', l: '75%'},
+          {n: 'CYBERSEC', l: '70%'}
+        ]; track skill.n) {
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">{{skill.n}}</span>
+              <span class="skill-perc">{{skill.l}}</span>
+            </div>
+            <div class="progress-bg">
+              <div class="progress-fill" [style.width]="skill.l"></div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
